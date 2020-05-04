@@ -24,7 +24,7 @@ defmodule ExTwilio.Lookup do
     Retrieves information based on the inputed phone number. Supports Twilio's add-ons.
 
     Examples -
-    {:ok, info} = ExTwilio.Lookup.retrieve("12345678910", [Type: carrier])
+    {:ok, info} = ExTwilio.Lookup.retrieve("12345678910", [Type: "carrier"])
   """
   def retrieve(phone_number, query \\ []) do
     auth = [basic_auth: {Config.account_sid(), Config.auth_token()}]
